@@ -1,0 +1,84 @@
+$font-stack: 'Raleway', sans-serif;
+$white: rgb(255, 255, 255);
+
+$screen-size-xs: 480px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #654ea3, #eaafc8);;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  background-color: $white;
+  width: min(55%, 2000px);
+  height: min(500px, 1200px);
+
+  &__title {
+    text-align: center;
+  }
+}
+
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+  &__input {
+    margin-top: 8px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding-left: 4px;
+    height: 32px;
+    width: 240px;
+    font-size: 12px;
+    &--text-area {
+      height: 120px;
+      border: 1px solid lightgray;
+      border-radius: 4px;
+      font-size: 12px;
+      padding-left: 4px;
+      margin-top: 8px;
+      width: 240px;
+    }
+  }
+  &__label {
+    font-size: 10px;
+  }
+}
+
+.btn-container {
+  padding: 20px 0px;
+}
+
+.btn {
+  padding: 0 20px;
+  font-size: 12px;
+  height: 32px;
+  border-radius: 26px;
+}
+
+@media screen and  (max-width: $screen-size-xs) {
+  .container {
+    width: 100%;
+    height: 80%;
+  }
+}

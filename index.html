@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <title>Content Form</title>
+  <script src="./script.js" async></script>
+</head>
+
+<body>
+  <main class="container">
+    <h2 class="container__title">Contact us</h2>
+    <form class="form">
+      <div class="form__input-container">
+        <label for="name" class="form__label">YOUR NAME:</label>
+        <input id="name" type="text" placeholder="First name" class="form__input">
+        <input id="surname" type="text" placeholder="Last name" class="form__input">
+      </div>
+      <div class="form__input-container">
+        <label for="email" class="form__label">EMAIL ADDRESS:</label>
+        <input id="email" type="email" placeholder="Eg. example@email.com" class="form__input">
+      </div>
+      <div class="form__input-container">
+        <label for="phone" class="form__label">PHONE NUMBER:</label>
+        <input id="phone" type="number" placeholder="Eg. +1 800 000000" class="form__input">
+      </div>
+      <div class="form__input-container">
+        <label for="message" class="form__label">MESSAGE:</label>
+        <textarea id="message" placeholder="Please enter your comments..." class="form__input--text-area" rows="8"></textarea>
+      </div>
+      <div class="btn-container">
+        <input type="radio" id="draft" name="radio" value="draft">
+        <label for="draft">Draft</label>
+        <input type="radio" id="published" name="radio" value="published">
+        <label for="published">Published</label>
+        <button class="btn btn--reset">Reset</button>
+        <button class="btn btn--submit">Submit</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
