@@ -19,8 +19,8 @@
     <form class="form">
       <div class="form__input-container">
         <label for="name" class="form__label">YOUR NAME:</label>
-        <input id="name" type="text" placeholder="First name" class="form__input">
-        <input id="surname" type="text" placeholder="Last name" class="form__input">
+        <input required id="name" type="text" placeholder="First name" class="form__input">
+        <input required id="surname" type="text" placeholder="Last name" class="form__input">
       </div>
       <div class="form__input-container">
         <label for="email" class="form__label">EMAIL ADDRESS:</label>
@@ -28,21 +28,49 @@
       </div>
       <div class="form__input-container">
         <label for="phone" class="form__label">PHONE NUMBER:</label>
-        <input id="phone" type="number" placeholder="Eg. +1 800 000000" class="form__input">
+        <input required id="phone" type="number" placeholder="Eg. +1 800 000000" class="form__input">
       </div>
       <div class="form__input-container">
         <label for="message" class="form__label">MESSAGE:</label>
-        <textarea id="message" placeholder="Please enter your comments..." class="form__input--text-area" rows="8"></textarea>
+        <textarea required id="message" placeholder="Please enter your comments..." class="form__input--text-area" rows="8"></textarea>
       </div>
       <div class="btn-container">
-        <input type="radio" id="draft" name="radio" value="draft">
-        <label for="draft">Draft</label>
-        <input type="radio" id="published" name="radio" value="published">
-        <label for="published">Published</label>
-        <button class="btn btn--reset">Reset</button>
-        <button class="btn btn--submit">Submit</button>
+        <div class="radio-btn-container">
+          <input required type="radio" id="draft" name="radio" value="draft">
+          <label for="draft">Draft</label>
+          <input type="radio" id="published" name="radio" value="published">
+          <label for="published">Published</label>
+        </div>
+        <button id="reset-btn" type="reset" class="btn btn--reset">Reset</button>
+        <button type="submit" class="btn btn--submit">Submit</button>
       </div>
+     
     </form>
+    <div class="modal-container">
+      <div class="modal">
+        <button class="close-modal">Close</button>
+        <div class="modal__data">
+          <div class="data_container">
+            <span class="data-content first-name">First name: </span>
+          </div>
+          <div class="data_container">
+            <span class="data-content last-name">Last name: </span>
+          </div>
+          <div class="data_container">
+            <span class="data-content email">Email: </span>
+          </div>
+          <div class="data_container">
+            <span class="data-content phone-number">Phone number: </span>
+          </div>
+          <div class="data_container">
+            <span class="data-content message">Message: </span>
+          </div>
+          <div class="data_container">
+            <span class="data-content content-state">Content state: </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </body>
 
