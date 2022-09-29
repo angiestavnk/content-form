@@ -22,6 +22,10 @@ const formInputs = [firstName, lastName, email, phone, message];
 formInputs.forEach(item => item.addEventListener('change', updateLocalStorage));
 [...radioButtons].forEach(item => item.addEventListener('change', getRadioButtonsValue));
 
+window.onload = function () {
+  setDataFromLocalStorage();
+};
+
 function setDataFromLocalStorage() {
   formInputs.forEach(item => setValueFromLocalStorageTo(item));
   getCheckedRadioButton()
@@ -38,11 +42,6 @@ function setValueFromLocalStorageTo(element) {
 function getCheckedRadioButton() {
   const radioButtonLocalStorageVal = localStorage.getItem(['radio-button']);
   return radioButtonLocalStorageVal;
-};
-
-
-window.onload = function () {
-  setDataFromLocalStorage();
 };
 
 function updateLocalStorage(event) {
@@ -67,8 +66,7 @@ function setDataToModal() {
   modalDataStructure.forEach(item => item[1].appendChild(document.createTextNode(localStorage.getItem(item[0]))));
 };
 
-function onModalClose(e) {
-  e.preventDefault()
+function onModalClose() {
   modal.style.display = "none";
   window.location.reload();
 };

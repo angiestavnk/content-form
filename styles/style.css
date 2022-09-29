@@ -20,6 +20,7 @@ body {
   background-color: rgb(255, 255, 255);
   width: min(55%, 2000px);
 }
+
 .container__title {
   text-align: center;
 }
@@ -31,11 +32,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .form__input-container {
   display: flex;
   flex-direction: column;
   margin-top: 12px;
 }
+
 .form__input {
   margin-top: 8px;
   border: 1px solid lightgray;
@@ -45,6 +48,7 @@ body {
   width: 240px;
   font-size: 12px;
 }
+
 .form__input--text-area {
   height: 120px;
   border: 1px solid lightgray;
@@ -54,6 +58,7 @@ body {
   margin-top: 8px;
   width: 240px;
 }
+
 .form__label {
   font-size: 10px;
 }
@@ -69,6 +74,7 @@ body {
   border-radius: 26px;
   cursor: pointer;
 }
+
 .btn--submit {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
@@ -92,6 +98,7 @@ body {
   background: rgb(255, 255, 255);
   height: 450px;
 }
+
 .modal__data {
   display: flex;
   flex-direction: column;
@@ -99,9 +106,17 @@ body {
   align-items: center;
   padding-top: 40px;
 }
-.modal .close-modal {
+
+.close-modal {
   float: right;
-  width: 40px;
+  width: 60px;
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #eaafc8;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .radio-btn-container {
@@ -111,12 +126,15 @@ body {
   color: rgb(255, 255, 255);
   margin-bottom: 12px;
 }
+
 .radio-btn-container input[type=radio] {
   display: none;
 }
-.radio-btn-container input[type=radio]:checked + label {
+
+.radio-btn-container input[type=radio]:checked+label {
   background-color: #654ea3;
 }
+
 .radio-btn-container label {
   padding: 4px 16px;
   background-color: #eaafc8;
@@ -130,5 +148,3 @@ body {
     height: 80%;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
